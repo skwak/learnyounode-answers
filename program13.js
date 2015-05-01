@@ -1,3 +1,7 @@
+var http = require('http')
+var url = require('url')
+var map = require('through2-map')
+
 var server = http.createServer(function(req, res) {
   if (req['method'] == 'GET') {
     var parsedURL = url.parse(req.url, true)
